@@ -1,0 +1,102 @@
+body{
+    background-color: azure;
+    font-family: Arial;
+    line-height: 30px;
+}
+h1{
+    align-items: center;
+}
+
+p1{
+    font-size: 15px;
+}
+.tab{
+    display: inline-block;
+    margin-left: 40px;
+}
+.navigation{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.navBody{
+    float: left;
+}
+.navLink{
+    display: block;
+    background-color: #333;
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+}
+.navLink:hover{
+    background-color: #111;
+}
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    align-items: center;
+    background-color: azure;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color:cornflowerblue;
+    align-items: center;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color:deepskyblue;
+  }
+
+  .attribute {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .imglabel{
+    font-size: larger;
+    align-self: center;
+    }
+  
+  /* Style the container/contact section */
+  .container {
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: center;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  #fname {
+    align-items: center;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

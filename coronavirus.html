@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Max Weinreb</title>
+  <link rel="stylesheet" href="coronavirus.css" type="text/css">
+</head>
+<body id = "body">
+    <h1>
+      MAX WEINREB
+    </h1>
+    <ul class="navigation">
+      <li class="navBody"><a class="navLink" href="index.html">Home</a></li>
+      <li class="navBody"><a class="navLink" href="BallCraze.html">Ball Craze</a></li>
+      <li class="navBody"><a class="navLink" href="coronavirus.html">Coronavirus Simulations</a></li>
+    </ul>
+    <div id = "basicSim">
+        <h2>Basic Simulation</h2>
+        <h4>This simulation is extremely naive; any contact between an infected individual and a healthy individual results in infection.</br>
+            An individual is cured if after being infected for 20 seconds they are not randomly chosen to die, assuming a 2.5% mortality rate.</h4>
+        <div class = "container" style="display: flex; flex-direction: row;">
+            <canvas id = "canvas" style = "margin-top: 30px; margin-right: 15px; border:1px solid black"></canvas>
+            <div class = "attributes" style="display: flex; flex-direction: column;">
+                <div class = "attribute">
+                    <h4 class = "imglabel" id = "healthy">59</h4>
+                    <img src = "images/coronavirus/healthy.png" style="width: 30%; height:30%; align-self: center;">
+                    <h3 style="align-self: center;">Healthy</h3>
+                </div>
+                <div class = "attribute">
+                    <h4 class = "imglabel" id = "sick">1</h4>
+                    <img src = "images/coronavirus/sick.png" style="width: 30%; height:30%; align-self: center;">
+                    <h3 style="align-self: center;">Sick</h3>
+                </div>
+                <div class = "attribute">
+                    <h4 class = "imglabel" id = "recovered">0</h4>
+                    <img src = "images/coronavirus/recovered.png" style="width: 30%; height:30%; align-self: center;">
+                    <h3 style="align-self: center;">Recovered</h3>
+                </div>
+                <div class = "attribute">
+                    <h4 class = "imglabel" id = "dead">0</h4>
+                    <img src = "images/coronavirus/death.png" style="width: 30%; height:30%; align-self: center;">
+                    <h3 style="align-self: center;">Dead</h3>
+                </div>
+            </div>
+        </div>
+        <h4>As you can see, it does not take long to infect everybody, and although the death count is low due to the relatively small mortality rate, </br>
+        The speed at which the virus spreads seems to be dependent most on interaction between individuals, and the number of individuals who each person </br>
+        interacts with while they are sick.
+        </h4>
+        <script src = "CoronaSimulation.js" defer></script>
+    </div>
+    <h2>Contact</h2>
+    <p1>If you have any questions, you can reach me at <a href=mailto:"maxberniew@gmail.com.com">contact@maxweinreb.com</a></p1>
+</body>
+  
+  </html>
