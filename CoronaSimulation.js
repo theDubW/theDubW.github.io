@@ -38,18 +38,18 @@ class Person {
         this.speed = Math.sqrt(Math.pow(this.xVelocity, 2)+Math.pow(this.yVelocity, 2));
         ratio = this.xVelocity/this.yVelocity;
     }
-    img;
-    imgSrc;
-    xPos;
-    yPos;
-    xVelocity;
-    yVelocity;
-    speed;
-    man;
-    timeSick;
-    sick;
-    healthy;
-    recovered;
+    // img;
+    // imgSrc;
+    // xPos;
+    // yPos;
+    // xVelocity;
+    // yVelocity;
+    // speed;
+    // man;
+    // timeSick;
+    // sick;
+    // healthy;
+    // recovered;
 }
 
 window.addEventListener('load', function () {

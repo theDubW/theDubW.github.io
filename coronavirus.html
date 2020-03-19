@@ -15,14 +15,15 @@
     </ul>
     <div id = "basicSim">
         <h2>Basic Simulation</h2>
-        <h4>This simulation is extremely naive; any contact between an infected individual and a healthy individual results in infection.</br>
+        <h4>This simulation is extremely naive; any contact between an infected individual and a healthy individual results in infection.<br>
             An individual is cured if after being infected for 20 seconds they are not randomly chosen to die, assuming the mortality rate specified above.</h4>
         <div class = "customizeValues">
             <div class="customize">
                 <div class="slidecontainer">
                     <input type="range" min="1" max="150" value="25" class="slider" id="mortality">
                 </div>
-                <h5>Mortality Rate <h5 id="mortalityoutput">2.5%</h5> </h5>
+                <h5>Mortality Rate</h5>
+                <h5 id="mortalityoutput">2.5%</h5>
             </div>
             <div class="customize">
                 <div class="slidecontainer">
@@ -63,14 +64,14 @@
                 </div>
             </div>
         </div>
-        <h4>As you can see, it does not take long to infect everybody if the speed of interaction is relatively high, which makes intuitive sense. Herein lies the first takeaway: </br>
-        The speed at which the virus spreads seems to be dependent most on interaction between individuals, and the number of individuals who each person </br>
+        <h4>As you can see, it does not take long to infect everybody if the speed of interaction is relatively high, which makes intuitive sense. Herein lies the first takeaway: <br>
+        The speed at which the virus spreads seems to be dependent most on interaction between individuals, and the number of individuals who each person <br>
         infects (R0).
         </h4>
         <script src = "CoronaSimulation.js" defer></script>
     </div>
     <h2>Contact</h2>
-    <p1>If you have any questions, you can reach me at <a href=mailto:"maxberniew@gmail.com">maxberniew@gmail.com</a></p1>
+    <p1>If you have any questions, you can reach me at <a href=mailto:'maxberniew@gmail.com'>maxberniew@gmail.com</a></p1>
 </body>
   
   </html>
