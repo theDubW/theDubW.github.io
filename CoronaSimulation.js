@@ -7,9 +7,10 @@ class Person {
         this.img.height = 40;
         this.xPos = xPos;
         this.yPos = yPos;
+        this.speed = 0.36;
         this.xVelocity = Math.random()*0.316;
         this.xVelocity=Math.random()<0.5?this.xVelocity:-this.xVelocity;
-        this.yVelocity = Math.sqrt(0.1-Math.pow(this.xVelocity, 2));
+        this.yVelocity = Math.sqrt(Math.pow(this.speed, 2)-Math.pow(this.xVelocity, 2));
         this.yVelocity=Math.random()<0.5?this.yVelocity:-this.yVelocity;
         this.sick = false;
         this.timeSick = 0;
@@ -30,12 +31,20 @@ class Person {
         this.recovered = true;
         this.img.src = this.man?"images\\coronavirus\\recoveredMan.png":"images\\coronavirus\\recoveredWoman.png";
     }
+    updateSpeed(speed){
+        var ratio = speed/this.speed;
+        this.xVelocity = this.xVelocity*ratio;
+        this.yVelocity = this.yVelocity*ratio;
+        this.speed = Math.sqrt(Math.pow(this.xVelocity, 2)+Math.pow(this.yVelocity, 2));
+        ratio = this.xVelocity/this.yVelocity;
+    }
     img;
     imgSrc;
     xPos;
     yPos;
     xVelocity;
     yVelocity;
+    speed;
     man;
     timeSick;
     sick;
@@ -47,8 +56,6 @@ window.addEventListener('load', function () {
     main();
   });
 function main(){
-
-
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
     canvas.width = 24*40;
@@ -58,6 +65,9 @@ function main(){
     var numHealthy = population.length-1;
     var numDead = 0;
     var numRecovered = 0;
+    var mortalityRate = 2.5;
+    var socialspeed = 0.36;
+    var clock = 0;
     console.log("length: "+population.length);
     for(var i = 0; i<population.length; i++){
         var x = 50+(i%10)*92;
@@ -81,14 +91,29 @@ function main(){
         clearInterval(tempDisplay);
         var refresh = setInterval(frame, 10);
     }, 1500);
+    document.getElementById("mortality").oninput = function(){
+        document.getElementById("mortalityoutput").innerText = document.getElementById("mortality").value/10+"%";
+        mortalityRate = document.getElementById("mortality").value/10;
+    }
+    document.getElementById("socialspeed").oninput = function(){
+        document.getElementById("speedoutput").innerText = document.getElementById("socialspeed").value;
+        socialspeed = document.getElementById("socialspeed").value/100;
+        for(var i = 0; i<population.length; i++){
+            population[i].updateSpeed(socialspeed);
+        }
+    }
     function frame(){
         document.getElementById("healthy").innerText = numHealthy;
         document.getElementById("sick").innerText = numSick;
         document.getElementById("recovered").innerText = numRecovered;
+        document.getElementById("dead").innerText = numDead;
+        document.getElementById("clock").innerText = parseFloat(Math.round(clock*10)/10).toFixed(1);
+        if(numSick!=0)
+            clock+=0.01;
         for(var i = 0; i<population.length; i++){
             if(population[i].sick) population[i].timeSick+=1;
             if(population[i].timeSick==2000 && population[i].sick){
-                var willDie = Math.floor(Math.random()*100)+1<=2.5?true:false;
+                var willDie = Math.floor(Math.random()*100)+1<=mortalityRate?true:false;
                 if(willDie){
                     population.splice(i, 1);
                     numDead++;
