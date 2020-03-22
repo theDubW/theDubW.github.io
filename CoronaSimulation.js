@@ -87,9 +87,10 @@ function main(){
             context.drawImage(population[i].img, population[i].xPos, population[i].yPos, 40, 40);
         }
     }, 10);
+    var refresh;
     setTimeout(function(){
         clearInterval(tempDisplay);
-        var refresh = setInterval(frame, 10);
+        refresh = setInterval(frame, 10);
     }, 1500);
     document.getElementById("mortality").oninput = function(){
         document.getElementById("mortalityoutput").innerText = document.getElementById("mortality").value/10+"%";
@@ -110,6 +111,8 @@ function main(){
         document.getElementById("clock").innerText = parseFloat(Math.round(clock*10)/10).toFixed(1);
         if(numSick!=0)
             clock+=0.01;
+        if(numSick==0)
+            clearInterval(refresh);
         for(var i = 0; i<population.length; i++){
             if(population[i].sick) population[i].timeSick+=1;
             if(population[i].timeSick==2000 && population[i].sick){
