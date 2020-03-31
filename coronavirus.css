@@ -64,6 +64,11 @@ p1{
   input[type=submit]:hover {
     background-color:deepskyblue;
   }
+  .simCanvas{
+    margin-top: 30px;
+    margin-right: 15px;
+    border:1px solid black;
+  }
   .customizeValues{
       display: flex;
       flex-direction: row;
