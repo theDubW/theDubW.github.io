@@ -20,13 +20,13 @@ export default function App(props) {
   // console.log("props: ", props);
   // console.log("location: ", location);
 
-  if(location.state.from_photography == true){
-    // var elem = document.getElementById(location.state.to);
-    console.log(ref);
-    // ref.current.scrollIntoView({behavior: "smooth"});
-    // elem.scrollIntoView({behavior: "smooth"});
-    console.log("CAME FROM PHOTOS!");
-  }
+  // if(location.state.from_photography == true){
+  //   // var elem = document.getElementById(location.state.to);
+  //   console.log(ref);
+  //   // ref.current.scrollIntoView({behavior: "smooth"});
+  //   // elem.scrollIntoView({behavior: "smooth"});
+  //   console.log("CAME FROM PHOTOS!");
+  // }
   return (
     <main className="text-gray-400 bg-gray-900 body-font">
       <Navbar  />
