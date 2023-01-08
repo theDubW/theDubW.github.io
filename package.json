@@ -2,7 +2,7 @@
   "name": "max-weinreb",
   "version": "0.1.0",
   "homepage": "https://maxweinreb.com/",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@craco/craco": "^5.9.0",
     "@heroicons/react": "^1.0.1",
