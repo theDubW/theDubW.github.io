@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/theDubW.github.io/precache-manifest.033243a2c37a1b56f5045bbaeb78c879.js"
+  "/theDubW.github.io/precache-manifest.0dd9a40a248ab0956505aff80946eec6.js"
 );
 
 workbox.clientsClaim();
