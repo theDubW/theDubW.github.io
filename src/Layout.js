@@ -1,12 +1,15 @@
 import React from "react";
-import {Outlet} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Navbar from "./components/Navbar";
-
+import App from "./App";
+import Photography from "./Photography";
 const Layout = () => {
   return (
     <main className="text-gray-400 bg-gray-900 body-font">
-      <Navbar />
-      <Outlet />
+      <Routes>
+        <Route exact path="/" element={<App/>}/>
+        <Route path="/Photography"  element={<Photography/>}/>
+      </Routes>
     </main>
   );
 };

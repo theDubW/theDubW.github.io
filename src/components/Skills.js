@@ -1,10 +1,11 @@
 import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
 import React from "react";
 import { skills } from "../data";
+import { Element } from "react-scroll";
 
 export default function Skills() {
   return (
-    <section id="skills">
+    <Element id="skills">
       <div className="container px-5 py-10 mx-auto">
         <div className="text-center mb-20">
           <ChipIcon className="w-10 inline-block mb-4" />
@@ -30,6 +31,6 @@ export default function Skills() {
           ))}
         </div>
       </div>
-    </section>
+    </Element>
   );
 }

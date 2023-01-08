@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Element } from "react-scroll";
 export default function Contact() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -30,7 +30,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative">
+    <Element id="contact" className="relative">
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
         <form
           netlify
@@ -88,6 +88,6 @@ export default function Contact() {
           </button>
         </form>
       </div>
-    </section>
+    </Element>
   );
 }

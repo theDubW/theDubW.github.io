@@ -1,6 +1,8 @@
 import React from "react";
 import {photos} from "../data";
-
+import { Link as ScrollLink } from "react-scroll";
+import {Element} from "react-scroll";
+import { useState } from "react";
 export default function Photographs() {
     return (
         <main className="items-center text-center">
@@ -13,14 +15,14 @@ export default function Photographs() {
             <div>
                 {
                     photos.map((section) => (
-                        <a className="mr-5 text-lg hover:text-white" href = {"#"+section.section_title}> {section.section_title} </a>
+                        <ScrollLink smooth spy duration={500} to={section.section_title} className="mr-5 text-lg hover:text-white cursor-pointer"> {section.section_title} </ScrollLink>
                     ))
                 }
             </div>
             <div>
                 {
                     photos.map((section) => (
-                        <section id={section.section_title}>
+                        <Element id={section.section_title}>
                             <h1 className="title-font py-8 sm:text-2xl text-1xl mb-4 font-medium text-white" key={section.section_title}>{section.section_title}</h1>
                             <div className="flex flex-wrap -m-4 items-center">
                                 {section.photos.map((photo) => (
@@ -30,6 +32,7 @@ export default function Photographs() {
                                     <div className="flex">
                                         <img
                                         alt="gallery"
+                                        loading="lazy"
                                         className="relative inset-0 w-3/4 h-3/4 object-cover object-center mx-auto block"
                                         src={photo.image}
                                         />
@@ -42,7 +45,7 @@ export default function Photographs() {
                                     </a>
                                 ))}
                             </div>
-                        </section>
+                        </Element>
                     ))
                 }
             </div>
