@@ -1,7 +1,7 @@
 {
   "name": "max-weinreb",
   "version": "0.1.0",
-  "homepage": "https://theDubW.github.io/theDubW.github.io",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.9.0",
