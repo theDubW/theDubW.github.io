@@ -1,5 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
+import { Link as ScrollLink} from "react-scroll";
+
 export default function About() {
   return (
     <Element id="about">
@@ -18,11 +20,9 @@ export default function About() {
               className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
               Resume
             </a>
-            <a
-              href="#projects"
-              className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-              See My Past Work
-            </a>
+            <ScrollLink smooth spy duration={500} to = "projects" className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+            See My Past Work
+            </ScrollLink>
           </div>
         </div>
         {/* <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
