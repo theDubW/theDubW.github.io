@@ -36,8 +36,8 @@ export const projects = [
       "A command I developed for Stata, a \"general-purpose statistical software package\","+
       " widely used by statisticians globally. I co-wrote a paper detailing its necessity and"
       +"application which has been published in the Stata Journal.",
-    image: "./printcase_paper.png",
-    link: "https://journals.sagepub.com/doi/pdf/10.1177/1536867X221141022",
+    image: "./stata.png",
+    link: "https://github.com/theDubW/printcase",
   },
 ];
 
