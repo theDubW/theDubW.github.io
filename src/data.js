@@ -16,7 +16,7 @@ export const projects = [
       "A program which allows users to create automatic buy and sell "
       +"orders for stocks and specific options contracts they want in an intuitive UI. Built from "
       +"scratch in Python leveraging the Robin Stocks Library.",
-    image: "./MaxTrade_demo.png",
+    image: "./MaxTradeDemo.gif",
     link: "https://github.com/theDubW/maxtrade",
   },
   {

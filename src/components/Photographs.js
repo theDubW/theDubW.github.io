@@ -2,7 +2,6 @@ import React from "react";
 import {photos} from "../data";
 import { Link as ScrollLink } from "react-scroll";
 import {Element} from "react-scroll";
-import { useState } from "react";
 export default function Photographs() {
     return (
         <main className="items-center text-center">
@@ -26,7 +25,7 @@ export default function Photographs() {
                             <h1 className="title-font py-8 sm:text-2xl text-1xl mb-4 font-medium text-white" key={section.section_title}>{section.section_title}</h1>
                             <div className="flex flex-wrap -m-4 items-center">
                                 {section.photos.map((photo) => (
-                                    <a
+                                    <div
                                     key={photo.image}
                                     className="h-full w-full p-4">
                                     <div className="flex">
@@ -42,7 +41,7 @@ export default function Photographs() {
                                             </h1>
                                         </div>
                                     </div>
-                                    </a>
+                                    </div>
                                 ))}
                             </div>
                         </Element>

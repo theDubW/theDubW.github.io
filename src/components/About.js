@@ -8,7 +8,7 @@ export default function About() {
     <Element id="about">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <div className="flex space-x-64">
+          <div className="flex">
             <div className="">
               <h1 className="title-font sm:text-4xl text-3xl font-medium text-white mb-4">
                 Hey, I'm Max.
@@ -20,7 +20,7 @@ export default function About() {
               accessibility. 
               </p>
             </div>
-            <img src="profile_picture_cropped.png" alt="Profile Picture" className="w-32 h-32 rounded-full ml-auto mb-0"/>
+            <img src="profile_picture_cropped.png" alt="Profile" className="w-32 h-32 rounded-full ml-auto mb-0"/>
           </div>
           
           <div className="flex justify-center mb-4">

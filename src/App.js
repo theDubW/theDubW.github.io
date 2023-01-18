@@ -1,17 +1,17 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
-import { useLocation } from "react-router";
+// import { useLocation } from "react-router";
 import { useEffect } from "react";
 // import Photography from "./components/";
 
 
 export default function App(props) {
 
-  const location = useLocation();
+  // const location = useLocation();
   const ref = useRef(null);
   useEffect(() => {
     window.scrollTo(0, 0)
