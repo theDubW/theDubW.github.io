@@ -35,7 +35,7 @@ export default function About() {
           </div>
           <div className="flex justify-center">
             <SocialIcon url="https://github.com/theDubW/" className="mr-4"/>
-            <SocialIcon url="https://www.linkedin.com/in/max-weinreb-1a33b7194/"/> 
+            <SocialIcon url="https://www.linkedin.com/in/maxweinreb/"/> 
           </div>
         </div>
       </div>
