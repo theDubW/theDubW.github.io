@@ -6,11 +6,8 @@ import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
 // import { useLocation } from "react-router";
 import { useEffect } from "react";
-import ReactGA from "react-ga4";
-const tracking_id = ""
 // import Photography from "./components/";
 
-ReactGA.initialize("G-16PTFCZ1GV");
 export default function App(props) {
 
   // const location = useLocation();
