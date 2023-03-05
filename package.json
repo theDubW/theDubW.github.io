@@ -1,7 +1,7 @@
 {
   "name": "max-weinreb",
   "version": "0.1.0",
-  "homepage": "https://maxweinreb.com/",
+  "homepage": "https://www.maxweinreb.com/",
   "private": false,
   "dependencies": {
     "@craco/craco": "^5.9.0",

@@ -185,23 +185,5 @@ export const photos = [
         image: "./Photos/Abortion_Protest/officer.jpg"
       }
     ]
-  },
-  {
-    section_title: "Portraits",
-    photos:
-    [
-      {
-        title: "End of Freshman Year",
-        image: "./Photos/Portraits/in_dobie.jpg"
-      },
-      {
-        title: "Out of Focus",
-        image: "./Photos/Portraits/failed_self_portrait.jpg"
-      },
-      {
-        title: "Before A Photo Spree",
-        image: "./Photos/Portraits/Max_mirror.jpg"
-      }
-    ]
   }
 ];
