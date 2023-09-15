@@ -1,3 +1,11 @@
+export const workingOn = {
+  title: "Raindrop",
+  subtitle: "A brand new internship platform for students and employers",
+  description: "Raindrop helps students find, track, and improve their internship applications. Over the past six months, "+
+  "I've been working on designing the platform with my friends Logan Vaz and Rishin Kesarla.",
+  image: "./raindrop.png",
+  link: "https://raindropjobs.com"
+}
 export const projects = [
   {
     title: "UT Course Scheduler",

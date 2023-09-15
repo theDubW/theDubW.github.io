@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
 // import { useLocation } from "react-router";
 import { useEffect } from "react";
+import WorkingOn from "./components/WorkingOn";
 // import Photography from "./components/";
 
 export default function App(props) {
@@ -30,6 +31,7 @@ export default function App(props) {
     <main className="text-gray-400 bg-gray-900 body-font">
       <Navbar  />
       <About />
+      <WorkingOn />
       <Projects ref={el => { console.log(el); ref.current = el;}}/>
       <Skills />
       <Contact/>
